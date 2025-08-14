@@ -1,49 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Basics & Box Model Demo</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* ===== Global Styles ===== */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f9f9f9;
+}
 
-    <header class="site-header">
-        <h1>My First Styled Page</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+/* ===== Header ===== */
+.site-header {
+    background-color: #004aad;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-    <main>
-        <section class="intro">
-            <h2>Welcome to My Page</h2>
-            <p>This is a simple web page styled entirely with CSS. 
-               It demonstrates how the <strong>Box Model</strong> 
-               affects layout, spacing, and element boundaries.</p>
-        </section>
+.site-header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
 
-        <section class="cards">
-            <div class="card">
-                <h3>Box Model</h3>
-                <p>Padding, borders, and margins define how much space surrounds 
-                   your content.</p>
-            </div>
-            <div class="card">
-                <h3>Colors & Fonts</h3>
-                <p>CSS lets you change text color, font size, and background colors 
-                   for visual hierarchy.</p>
-            </div>
-        </section>
+.site-header nav a:hover {
+    text-decoration: underline;
+}
 
-        <button class="cta-button">Click Me</button>
-    </main>
+/* ===== Intro Section ===== */
+.intro {
+    background-color: #e3f2fd;
+    border: 2px solid #90caf9; /* Box Model: border */
+    padding: 20px;            /* Box Model: padding */
+    margin: 20px auto;        /* Box Model: margin */
+    width: 80%;
+    border-radius: 8px;
+}
 
-    <footer class="site-footer">
-        <p>&copy; 2025 My Styled Page</p>
-    </footer>
+/* ===== Cards ===== */
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
 
-</body>
-</html>
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 250px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ===== Button ===== */
+.cta-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #00327a;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
